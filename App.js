@@ -2,15 +2,13 @@ import React from 'react';
 import Expo from 'expo';
 import getTheme from './native-base-theme/components';
 import material from './native-base-theme/variables/material';
-import { Container, Header, Left, Body, Title, StyleProvider } from 'native-base';
+import { StyleProvider } from 'native-base';
 import MainStack from './src/Router';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-
     console.ignoredYellowBox = ['Warning', 'Setting', 'Possible'];
-
     this.state = {
       isReady: false,
     };

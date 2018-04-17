@@ -25,7 +25,7 @@ const Tabs = TabNavigator(
                     <FooterTab>
                         <Button transparent vertical
                                 onPress = {() => props.navigation.navigate('HomeScreen')}>
-                            <Icon name = 'ios-home-outline' style = {{color: '#fff'}}/>
+                            <Icon name = 'ios-planet-outline' style = {{color: '#fff'}}/>
                             <Text style = {{color: '#fff'}}>Home</Text>
                         </Button>
                         <Button transparent vertical
