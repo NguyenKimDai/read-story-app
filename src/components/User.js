@@ -29,25 +29,36 @@ export default class User extends Component {
                             <Thumbnail large source = {require('../images/avatar.png')}/>
                         </View>
 
-                        <TouchableHighlight style = {{alignItems: 'center', marginTop: 15}}
-                                            underlayColor = '#19c49c'
-                                            onPress = {() => {Alert.alert('Touched')}}>
-                            <Text style = {{padding: 10, borderWidth: 1, borderColor: '#19c49c', borderRadius: 50}}>Đăng nhập</Text>
-                        </TouchableHighlight>
+                        <View style = {{alignItems: 'center', marginTop: 15}}>
+                            <TouchableHighlight style = {{borderRadius: 50}}
+                                                underlayColor = '#19c49c'
+                                                onPress = {() => {}}>
+                                <Text style = {{padding: 10, borderWidth: 1, borderColor: '#19c49c', borderRadius: 50}}>Đăng nhập</Text>
+                            </TouchableHighlight>
+                        </View>
 
                         <View style = {{marginTop: 20, marginHorizontal: 15}}>
-                            <Item style = {{paddingVertical: 20, alignItems: 'center'}}>
-                                <Icon name = 'ios-create-outline'/>
-                                <Text>Trở thành tác giả</Text>
-                            </Item>
-                            <Item style = {{paddingVertical: 20, alignItems: 'center'}}>
-                                <Icon name = 'ios-chatbubbles-outline'/>
-                                <Text>Phản hồi</Text>
-                            </Item>
-                            <Item style = {{paddingVertical: 20, alignItems: 'center'}}>
-                                <Icon name = 'ios-settings-outline'/>
-                                <Text>Thiết lập</Text>
-                            </Item>
+                        <Button full transparent
+                                    style = {{justifyContent: 'flex-start'}}>
+                                <Item style = {{paddingVertical: 20, alignItems: 'center'}}>
+                                    <Icon name = 'ios-create-outline'/>
+                                    <Text>Trở thành tác giả</Text>
+                                </Item>
+                            </Button>
+                            <Button full transparent
+                                    style = {{justifyContent: 'flex-start'}}>
+                                <Item style = {{paddingVertical: 20, alignItems: 'center'}}>
+                                    <Icon name = 'ios-chatbubbles-outline'/>
+                                    <Text>Phản hồi</Text>
+                                </Item>
+                            </Button>
+                            <Button full transparent
+                                    style = {{justifyContent: 'flex-start'}}>
+                                <Item style = {{paddingVertical: 20, alignItems: 'center'}}>
+                                    <Icon name = 'ios-settings-outline'/>
+                                    <Text>Thiết lập</Text>
+                                </Item>
+                            </Button>
                         </View>
                     </ScrollView>
                 </View>
