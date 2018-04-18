@@ -11,7 +11,7 @@ import {Container,
         CardItem,
         Button
 } from 'native-base';
-import { FlatList, TouchableOpacity } from 'react-native';
+import { FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 
 export default class HomePage extends Component {
     static navigationOptions = ({navigation}) => ({
@@ -58,7 +58,7 @@ export default class HomePage extends Component {
 
     _renderItem = ({item}) => {
         return (
-            <Button style = {{width: 100, height: 100, marginRight: 10, backgroundColor: 'lightblue'}}>
+            <Button style = {styles.item}>
                 <Text>{item.value}</Text>
             </Button>
         );
@@ -68,7 +68,7 @@ export default class HomePage extends Component {
         return (
             <Container>
                 <Content padder>
-                    <Card>
+                    <Card transparent>
                         <CardItem>
                             <View style = {{flexDirection: 'column', flex: 1}}>
                                 <View style = {{flexDirection: 'row', marginBottom: 10}}>
@@ -85,11 +85,11 @@ export default class HomePage extends Component {
                             </View>
                         </CardItem>
                     </Card>
-                    <Card>
+                    <Card transparent>
                         <CardItem>
                             <View style = {{flexDirection: 'column', flex: 1}}>
                                 <View style = {{flexDirection: 'row', marginBottom: 10}}>
-                                    <Text style = {{flex: 1}}>Recommended</Text>
+                                    <Text style = {{flex: 1}}>Trending</Text>
                                     <TouchableOpacity>
                                         <Text>MORE</Text>
                                     </TouchableOpacity>
@@ -107,3 +107,12 @@ export default class HomePage extends Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    item: {
+        width: 100,
+        height: 100,
+        marginRight: 10,
+        backgroundColor: 'lightblue',
+    },
+});

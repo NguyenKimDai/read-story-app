@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Content, Text, View, Header, Item, Icon, Input, Segment, Button } from 'native-base';
-import Reading from './Libraries/Reading';
-import Completed from './Libraries/Completed';
-import Downloaded from './Libraries/Downloaded';
+import Reading from './Reading';
+import Completed from './Completed';
+import Downloaded from './Downloaded';
 
 export default class Library extends Component {
     static navigationOptions = ({navigation}) => ({

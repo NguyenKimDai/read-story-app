@@ -30,12 +30,12 @@ const Tabs = TabNavigator(
                         </Button>
                         <Button transparent vertical
                                 onPress = {() => props.navigation.navigate('LibraryScreen')}>
-                            <Icon name = 'ios-book-outline' style = {{color: '#fff'}}/>
+                            <Icon name = 'ios-leaf-outline' style = {{color: '#fff'}}/>
                             <Text style = {{color: '#fff'}}>Library</Text>
                         </Button>
                         <Button transparent vertical
                                 onPress = {() => props.navigation.navigate('UserScreen')}>
-                            <Icon name = 'ios-person-outline' style = {{color: '#fff'}}/>
+                            <Icon name = 'ios-ionitron-outline' style = {{color: '#fff'}}/>
                             <Text style = {{color: '#fff'}}>User</Text>
                         </Button>
                     </FooterTab>
