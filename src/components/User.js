@@ -25,7 +25,7 @@ export default class User extends Component {
                                             style = {{height: 200, alignSelf: 'stretch'}}>
                         </ImageBackground>
 
-                        <View style = {{alignItems: 'center', marginTop: -20}}>
+                        <View style = {{alignItems: 'center', marginTop: -25}}>
                             <Thumbnail large source = {require('../images/avatar.jpg')}/>
                         </View>
 
@@ -42,7 +42,7 @@ export default class User extends Component {
                                     style = {{justifyContent: 'flex-start'}}>
                                 <Item style = {{paddingVertical: 20, alignItems: 'center'}}>
                                     <Icon name = 'ios-create-outline'/>
-                                    <Text>Becomean author</Text>
+                                    <Text>Become an author</Text>
                                 </Item>
                             </Button>
                             <Button full transparent

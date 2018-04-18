@@ -64,8 +64,8 @@ export default class HomePage extends Component {
                     <Text style = {[styles.title, styles.text_shadow]}>{item.value}</Text>
                 </View>
                 <View style = {{flex: 1}}>
-                    <Text style = {[styles.detail, styles.text_shadow, {flex: 1}]}>Author</Text>
-                    <Text style = {[styles.detail, styles.text_shadow, {flex: 1}]}>Category</Text>
+                    <Text style = {[styles.text_shadow, {flex: 1}]}>Author</Text>
+                    <Text style = {[styles.text_shadow, {flex: 1}]}>Category</Text>
                     <Button bordered light full
                             style = {[styles.text_shadow, {flex: 1}]}>
                         <Text style = {styles.text_shadow}>READ</Text>
@@ -113,6 +113,16 @@ export default class HomePage extends Component {
                             </View>
                         </CardItem>
                     </Card>
+
+                    <View style = {{alignItems: 'center', paddingHorizontal: 10}}>
+                        <Text style = {{fontSize: 20}}>There is nothing attracts you?</Text>
+                        <Text>We can recommend the most read stories. You can also find stories according to your favorite genres</Text>
+                        <Button full
+                                style = {{margin: 15, backgroundColor: '#19c49c'}}
+                                onPress = {() => this.props.navigation.navigate('GenresScreen')}>
+                            <Text>Your favorite genres?</Text>
+                        </Button>
+                    </View>
                 </Content>
             </Container>
         );
@@ -131,9 +141,6 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 22,
         fontWeight: 'bold',
-    },
-    detail: {
-        color: '#fff',
     },
     text_shadow: {
         color: '#fff',

@@ -4,6 +4,8 @@ import Library from './components/Library';
 import User from './components/User';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Footer, FooterTab, Button, Icon, Text } from 'native-base';
+import StoryGenres from './components/StoryGenres';
+
 
 const Tabs = TabNavigator(
     {
@@ -48,5 +50,11 @@ const Tabs = TabNavigator(
 export default StackNavigator({
     MainStack: {
         screen: Tabs
+    },
+    HomeScreen: {
+        screen: HomePage
+    },
+    GenresScreen: {
+        screen: StoryGenres
     }
 });
