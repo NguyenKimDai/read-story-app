@@ -21,12 +21,12 @@ export default class User extends Component {
             <Container>
                 <View style = {{flex: 1}}>
                     <ScrollView>
-                        <ImageBackground    source = {require('../images/anime.jpeg')}
+                        <ImageBackground    source = {require('../images/bg.jpg')}
                                             style = {{height: 200, alignSelf: 'stretch'}}>
                         </ImageBackground>
 
                         <View style = {{alignItems: 'center', marginTop: -20}}>
-                            <Thumbnail large source = {require('../images/avatar.png')}/>
+                            <Thumbnail large source = {require('../images/avatar.jpg')}/>
                         </View>
 
                         <View style = {{alignItems: 'center', marginTop: 15}}>

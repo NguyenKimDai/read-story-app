@@ -11,7 +11,7 @@ import {Container,
         CardItem,
         Button
 } from 'native-base';
-import { FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { FlatList, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 
 export default class HomePage extends Component {
     static navigationOptions = ({navigation}) => ({
@@ -32,7 +32,7 @@ export default class HomePage extends Component {
         super(props);
         this.state = {
             data: [
-                { id: 1, value: 'JS' },
+                { id: 1, value: 'React Native' },
                 { id: 2, value: 'Android' },
                 { id: 3, value: 'iOS' },
                 { id: 4, value: 'C++' },
@@ -58,9 +58,20 @@ export default class HomePage extends Component {
 
     _renderItem = ({item}) => {
         return (
-            <Button style = {styles.item}>
-                <Text>{item.value}</Text>
-            </Button>
+            <ImageBackground    source = {require('../images/cover.png')}
+                                style = {styles.item}>
+                <View style = {{flex: 1, alignItems: 'center'}}>
+                    <Text style = {[styles.title, styles.text_shadow]}>{item.value}</Text>
+                </View>
+                <View style = {{flex: 1}}>
+                    <Text style = {[styles.detail, styles.text_shadow, {flex: 1}]}>Author</Text>
+                    <Text style = {[styles.detail, styles.text_shadow, {flex: 1}]}>Category</Text>
+                    <Button bordered light full
+                            style = {[styles.text_shadow, {flex: 1}]}>
+                        <Text style = {styles.text_shadow}>READ</Text>
+                    </Button>
+                </View>
+            </ImageBackground>
         );
     }
 
@@ -110,9 +121,24 @@ export default class HomePage extends Component {
 
 const styles = StyleSheet.create({
     item: {
-        width: 100,
-        height: 100,
+        width: 120,
+        height: 200,
         marginRight: 10,
-        backgroundColor: 'lightblue',
+        alignSelf: 'stretch',
+        padding: 5,
+    },
+    title: {
+        color: '#fff',
+        fontSize: 22,
+        fontWeight: 'bold',
+    },
+    detail: {
+        color: '#fff',
+    },
+    text_shadow: {
+        color: '#fff',
+        textShadowColor: 'rgba(0, 0, 0, 0.7)',
+        textShadowOffset: {width: -1, height: 1},
+        textShadowRadius: 10,
     },
 });

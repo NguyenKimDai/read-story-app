@@ -9,7 +9,7 @@ export default class ItemStory extends Component {
                 <CardItem>
                     <Body style = {{flexDirection: 'row'}}>
                         <Image  style = {{flex: 3, height: 100, alignSelf: 'stretch'}}
-                                source = {require('../images/avatar.png')}/>
+                                source = {require('../images/cover.png')}/>
                         <View style = {{flex: 7, paddingLeft: 10}}>
                             <View style = {{flex: 4}}>
                                 <Text style = {{fontWeight: 'bold', fontSize: 20}}>Fairy Tail</Text>
