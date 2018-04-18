@@ -1,5 +1,18 @@
 import React, { Component } from 'react';
-import { Container, Content, Text, View, Header, Item, Icon, Input, Segment, Button } from 'native-base';
+import {Container,
+        Content,
+        Text,
+        View,
+        Header,
+        Item,
+        Icon,
+        Input,
+        Segment,
+        Button,
+        Tabs,
+        Tab,
+        TabHeading
+} from 'native-base';
 import Reading from './Reading';
 import Completed from './Completed';
 import Downloaded from './Downloaded';
@@ -22,28 +35,38 @@ export default class Library extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            seg: 2,
+            seg: 1,
         };
     }
 
     render() {
         return (
             <Container>
+                {/* <Tabs>
+                    <Tab heading = {<TabHeading><Text>Reading</Text></TabHeading>}>
+                        <Reading/>
+                    </Tab>
+                    <Tab heading = {<TabHeading><Text>Completed</Text></TabHeading>}>
+                        <Completed/>
+                    </Tab>
+                    <Tab heading = {<TabHeading><Text>Downloaded</Text></TabHeading>}>
+                        <Downloaded/>
+                    </Tab>
+                </Tabs> */}
                 <Segment>
                     <Button first
                             active={this.state.seg === 1 ? true : false}
                             onPress = {() => this.setState({seg: 1})}>
-                        <Text>Đang đọc</Text>
+                        <Icon name = 'ios-book-outline'/>
                     </Button>
-                    <Button first
-                            active={this.state.seg === 2 ? true : false}
+                    <Button active={this.state.seg === 2 ? true : false}
                             onPress = {() => this.setState({seg: 2})}>
-                        <Text>Đã xong</Text>
+                        <Icon name = 'ios-checkmark-circle-outline'/>
                     </Button>
-                    <Button first
+                    <Button last
                             active={this.state.seg === 3 ? true : false}
                             onPress = {() => this.setState({seg: 3})}>
-                        <Text>Tải về</Text>
+                        <Icon name = 'ios-download-outline'/>
                     </Button>
                 </Segment>
                 <Content padder>

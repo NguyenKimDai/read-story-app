@@ -42,21 +42,21 @@ export default class User extends Component {
                                     style = {{justifyContent: 'flex-start'}}>
                                 <Item style = {{paddingVertical: 20, alignItems: 'center'}}>
                                     <Icon name = 'ios-create-outline'/>
-                                    <Text>Trở thành tác giả</Text>
+                                    <Text>Becomean author</Text>
                                 </Item>
                             </Button>
                             <Button full transparent
                                     style = {{justifyContent: 'flex-start'}}>
                                 <Item style = {{paddingVertical: 20, alignItems: 'center'}}>
                                     <Icon name = 'ios-chatbubbles-outline'/>
-                                    <Text>Phản hồi</Text>
+                                    <Text>Feedback</Text>
                                 </Item>
                             </Button>
                             <Button full transparent
                                     style = {{justifyContent: 'flex-start'}}>
                                 <Item style = {{paddingVertical: 20, alignItems: 'center'}}>
                                     <Icon name = 'ios-settings-outline'/>
-                                    <Text>Thiết lập</Text>
+                                    <Text>Settings</Text>
                                 </Item>
                             </Button>
                         </View>
